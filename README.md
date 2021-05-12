@@ -1,4 +1,4 @@
-# Web Platform Development Project Final
+# Web Platform Development Course Work 2 Final
 
 The following files comprise the course work 2 from one of my classes Web Platform Development 1 at ALU (African Leadership University) for my BSc (Hons) Computing Degree.
 
