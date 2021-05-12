@@ -1,0 +1,684 @@
+/* GENERAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+}
+/* Change Scrollbar width */
+::-webkit-scrollbar{
+  width: 15px;
+}
+/* Change Scrollbar background color */
+::-webkit-scrollbar-thumb{
+  background: #ff9900;
+}
+/* Change Highlight background color and text color once highlighted */
+::selection{
+  background-color: #ff9900;
+  color: white;
+}
+h1,h2,h3,h4,a,p {
+  color: black;
+}
+.m-t {
+  margin-bottom: 120px;
+}
+.container {
+  max-width: 1465px;
+  margin: auto;
+  padding-left: 25px;
+  padding-right: 25px;
+  text-align: center;
+}
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+h2 {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+h3 {
+  font-weight: 600;
+}
+p {
+  font-weight: 400;
+}
+a {
+  text-decoration: none;
+}
+li {
+  font-weight: 400;
+  list-style: none;
+}
+/* GENERAL STYLING END */
+
+/* HEADER STYLING */
+.header {
+  background-color: black;
+  height: 900px;
+  padding-top: 20px;
+
+  /* Styling for the navigation bar */
+}
+.nav-container {
+  width: 85%;
+  margin: auto;
+  text-align: center;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+}
+.logo img {
+  margin-top: 35px;
+  width: 250px;
+  padding-left: 20px;
+}
+nav {
+  flex: 2;
+  text-align: right;
+}
+nav ul {
+  display: inline-block;
+  list-style-type: none;
+  word-spacing: 30px;
+}
+nav ul li {
+  display: inline-block;
+  margin: 20px;
+  padding-top: 30px;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Hover effect for the Syllabus button in the navigation bar */
+.btn-navcontent {
+  width: 170px;
+  height: auto;
+  text-align: center;
+  background: #ff9900;
+  border: 2px #ff9900;
+  border-radius: 5px;
+  display: inline-block;
+  padding: 10px 30px;
+  letter-spacing: 2px;
+  transition: 0.3s all;
+}
+.btn-navcontent:hover {
+  background-color: #202b38;
+  border: 3 solid transparent;
+}
+/* Hover effect for the navigation excluding the Syllabus button*/
+.navcontent::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: width 0.3s;
+  margin: auto;
+  margin-top: 5px;
+}
+.navcontent:hover::after {
+  width: 100%;
+  transition: width 0.3s;
+}
+
+/* Styling for the  the class row in the HEADER SECTION */
+.row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 1300px;
+  margin: auto;
+  padding-left: 25px;
+  padding-right: 25px;
+  flex-basis: 50%;
+  width: 85%;
+}
+.col-2 {
+  flex-basis: 50%;
+  min-width: 600px;
+  margin-top: 100px;
+  color: white;
+}
+.col-2 .syllabus-video {
+  max-width: 600;
+  height: auto;
+  margin-left: 50px;
+}
+.col-2 h1 {
+  text-align: left;
+  font-size: 50px;
+  line-height: 60px;
+  margin: 50px 0;
+  color: white;
+}
+.col-2 p {
+  text-align: left;
+  color: white;
+}
+.btn-cta-explore{
+  scroll-behavior: smooth;
+}
+
+/* Hover effect for Explore button */
+.btn-cta-explore {
+  width: 250px;
+  text-align: center;
+  background: #ff9900;
+  border: 2px #ff9900;
+  border-radius: 5px;
+  display: inline-block;
+  padding: 10px 30px;
+  letter-spacing: 2px;
+  transition: 0.3s all;
+  margin: 50px 0;
+}
+.btn-cta-explore:hover {
+  background-color: #202b38;
+  border: 3 solid transparent;
+}
+/* HEADER STYLING END */
+
+/* TAUGHT BY STYLING*/
+.small-container p {
+  font-size: 15px;
+  text-align: center;
+  color: grey;
+  padding-top: 50px;
+}
+.taught {
+  background-color: #ecebeb;
+  padding-bottom: 60px;
+}
+.col-6 {
+  width: 100px;
+}
+/* Hover effect for the logo icons */
+.col-6 img {
+  width: 100%;
+  cursor: pointer;
+  filter: grayscale(100%);
+}
+.col-6 img:hover {
+  filter: grayscale(0%);
+}
+/* TAUGHT BY STYLING END*/
+
+
+/* USEFUL STYLING */
+.useful {
+  width: 85%;
+  height: 700px;
+  margin: auto;
+  text-align: center;
+  margin-top: 250px;
+  margin-bottom: 300px;
+}
+.useful .useful-image {
+  width: 50%;
+  float: right;
+}
+
+.useful-wrapper img {
+  max-width: 100%;
+  height: 700px;
+  border-radius: 5px;
+}
+
+.useful-image {
+  filter: grayscale(0) blur(0);
+  transition: 0.3s ease-in-out;
+}
+.useful-image:hover {
+  filter: grayscale(100%) blur(1px);
+}
+.useful-content {
+  width: 50%;
+  float: left;
+  text-align: left;
+  padding-top: 70px;
+}
+.useful h1 {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.useful p {
+  margin-top: 50px;
+}
+/* Hover effect for become button */
+.btn-cta-useful {
+  width: 200px;
+  text-align: center;
+  background: #ff9900;
+  border: 2px #ff9900;
+  border-radius: 5px;
+  display: inline-block;
+  padding: 10px 30px;
+  letter-spacing: 2px;
+  transition: 0.3s all;
+  margin: 50px 0;
+}
+.btn-cta-useful:hover {
+  background-color: #202b38;
+  border: 3 solid transparent;
+}
+/* USEFUL STYLING END */
+
+
+/* PRE-REQUISITE STYLING */
+.prerec {
+  width: 85%;
+  height: 350px;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 300px;
+}
+.prerec .prerec-image {
+  width: 50%;
+  float: left;
+  border-radius: 5px;
+}
+
+.prerec-wrapper img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+/* Hover effect for prerec-image*/
+.prerec-image {
+  filter: grayscale(0) blur(0);
+  transition: 0.3s ease-in-out;
+}
+.prerec-image:hover {
+  filter: grayscale(100%) blur(1px);
+}
+.prerec-content {
+  max-width: 50%;
+  float: right;
+  text-align: left;
+  padding-left: 100px;
+  padding-top: 20px;
+}
+.prerec h1 {
+  margin-bottom: 50px;
+}
+.prerec p {
+  margin-top: 50px;
+}
+/* Hover effect for different button */
+.btn-cta-prerec {
+  width: 200px;
+  text-align: center;
+  background: #ff9900;
+  border: 2px #ff9900;
+  border-radius: 5px;
+  display: inline-block;
+  padding: 10px 30px;
+  letter-spacing: 2px;
+  transition: 0.3s all;
+  margin: 50px 0;
+}
+.btn-cta-prerec:hover {
+  background-color: #202b38;
+  border: 3 solid transparent;
+}
+/* PRE-REQUISITE STYLING END */
+
+
+/* TOPICS STYLING */
+.topics {
+  width: 85%;
+  height: 600px;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 200px;
+}
+.topics .topics-image {
+  width: 50%;
+  float: right;
+}
+.topics-wrapper img {
+  max-width: 100%;
+  height: 600px;
+  border-radius: 5px;
+}
+/* Hover effect for topics-image*/
+.topics-image {
+  filter: grayscale(0) blur(0);
+  transition: 0.3s ease-in-out;
+}
+.topics-image:hover {
+  filter: grayscale(100%) blur(1px);
+}
+.topics-content {
+  width: 50%;
+  float: left;
+  text-align: left;
+  padding-right: 70px;
+  margin-top: 70px;
+}
+.topics h1 {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.topics p {
+  margin-top: 50px;
+}
+/* Hover effect for become button call to action (cta)*/
+.btn-cta-topics {
+  width: 200px;
+  text-align: center;
+  background: #ff9900;
+  border: 2px #ff9900;
+  border-radius: 5px;
+  display: inline-block;
+  padding: 10px 30px;
+  letter-spacing: 2px;
+  transition: 0.3s all;
+  margin: 50px 0;
+}
+.btn-cta-topics:hover {
+  background-color: #202b38;
+  border: 3 solid transparent;
+}
+/* USEFUL STYLING END */
+
+
+
+/* QUIZ STYLING*/
+.registration-quiz {
+  margin-top:200px;
+  margin-bottom: 0px;
+}
+/* The CSS here adding a width and overflow to manage responsiveness later in the code, also margin: 20px auto; is to help with centering. There is also a margin top I added to separate this from the registration section a little more */
+.quiz-wrapper {
+  width: 50%;
+  height: 700px;
+  margin: 20px auto;
+  overflow: auto;
+}
+
+/* The CSS here is used to help adjust the width of the quiz base on the size of the screen  */
+@media only screen and (max-width: 786px) {
+  .quiz-wrapper {
+    width: 70%;
+  }
+}
+
+/* The CSS here is adding adding a margin-bottom to the header section (which contains h1 and p) while centering the text as opposed to leaving it left */
+.quiz-header {
+  margin: 0 auto;
+  margin-bottom: 70px;
+  text-align: center;
+}
+
+/* The CSS here is just adding a margin bottom of 20px to the h1 to separate it from the  the paragraph*/
+.quiz-header h1 {
+  margin-bottom: 30px;
+}
+.quiz-header p {
+  margin: 0 auto;
+}
+.quiz-form {
+  margin-left: 10%;
+}
+
+/* The CSS here has now moved within the class .question-form, which is where the questions actually are located under in the HTML specifically we are separating the h3 (question title)from the question options which are in list form.  */
+.quiz-form h3 {
+  margin-bottom: 20px;
+}
+
+/* The CSS here adds spacing between list items */
+.quiz-form li {
+  margin-bottom: 30px;
+}
+
+/* CSS adds spacing between lines in the class .answer-hidden */
+.answer-hidden p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+/* This CSS adds styling to the hidden and congratulations  messages */
+.correct-answer-congratulations{
+  margin-left:10px;
+  color: #2bd600;
+}
+.answer-hidden{
+  margin-left: 10px;
+}
+.answer-hidden p{
+  color: #ff0000;
+}
+.answer-hidden a{
+  color: #ff0000;
+}
+
+/* The CSS here pushes the inputs slightly more inside, then it separates the input (radio and checkbox) from the actual text of the input option*/
+input {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+#quiz-results {
+  margin-left: 10%;
+}
+
+/* This CSS styles the .btn-quiz of each .quiz-form */
+.btn-quiz {
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+/* This CSS just adds a before hover before state to each button  */
+.btn-quiz {
+  width: auto;
+  height: auto;
+  text-align: center;
+  background: #ff9900;
+  border: 2px #ff9900;
+  color: white;
+  border-radius: 5px;
+  display: inline-block;
+  padding: 10px 30px;
+  letter-spacing: 2px;
+  transition: 0.3s all;
+}
+
+/* This CSS just dictates how the btn-quiz looks when hovering above it without selecting it */
+.btn-quiz:hover {
+  background-color: #202b38;
+  border: 3 solid transparent;
+}
+/* QUIZ STYLING END */
+
+/* REGISTRATION FORM STYLING */
+.register {
+  width: 60%;
+  margin: auto;
+}
+.register-form {
+  height: 700px;
+  width: 85%;
+  margin: auto;
+  margin-bottom: 200px;
+}
+.register-form select,textarea {
+  margin-left: 10px;
+}
+.register-form input,textarea,select {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 15px;
+  outline: none;
+  border: 1px solid rgba(219, 219, 219, 0.933);
+  border-radius: 5px;
+  font-family: "Open Sans";
+  font-size: 15px;
+  color: #757575;
+  appearance: none;
+}
+.register-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+#submit-form{
+  color:white;
+}
+
+/* Hover effect for the REGISTRATION FORM button in the navigation bar */
+.btn-register {
+  text-align: center;
+  background-color: #ff9900;
+  border: 2px #ff9900;
+  border-radius: 5px;
+  display: inline-block;
+  padding: 10px 30px;
+  letter-spacing: 2px;
+  transition: 0.3s all;
+  margin-bottom: 30px;
+}
+.btn-register:hover {
+  background-color: #202b38;
+  border: 3 solid transparent;
+}
+/* REGISTRATION FORM STYLING END */
+
+
+/* CERTIFIED BY STYLING  */
+.small-container p {
+  font-size: 15px;
+  text-align: center;
+  color: grey;
+  margin-bottom: 50px;
+  padding-top: 50px;
+}
+.certified {
+  background-color: #ecebeb;
+  padding-bottom: 50px;
+}
+.col-6 {
+  width: 100px;
+}
+/* Hover effect for the logo icons */
+.col-6 img {
+  width: 100%;
+  cursor: pointer;
+  filter: grayscale(100%);
+}
+.col-6 img:hover {
+  filter: grayscale(0%);
+}
+/* CERTIFIED BY STYLING  END*/
+
+
+/* CALL TO ACTION */
+.call-to-action {
+  color: #fff;
+  padding: 70px 0;
+  text-align: center;
+}
+.cta-wrapper {
+  background: linear-gradient(to left, #12181f, #090c0f);
+  height: 500px;
+}
+.cta__title {
+  padding-top: 25px;
+  color: white;
+}
+.cta__sub {
+  opacity: 0.6;
+  margin-top: 50px;
+  margin-bottom: 60px;
+}
+.cta__sub-center {
+  text-align: center;
+  color: white;
+}
+/* Hover effect for call to action button */
+.btn-cta {
+  width: 250px;
+  text-align: center;
+  background: #ff9900;
+  border: 2px #ff9900;
+  border-radius: 5px;
+  display: inline-block;
+  padding: 10px 30px;
+  letter-spacing: 2px;
+  transition: 0.3s all;
+  margin-bottom: 30px;
+}
+.btn-cta:hover {
+  background-color: #202b38;
+  border: 3 solid transparent;
+}
+/* CALL TO ACTION END */
+
+
+/* FOOTER */
+.footer {
+  background: black;
+  color: white;
+  font-size: 12px;
+  padding: 10px 0 20px;
+  width: auto;
+  padding-top: 100px;
+  padding-left: 100px;
+}
+.footer p {
+  color: white;
+}
+.footer h3 {
+  color: #ff9900;
+  margin-bottom: 20px;
+}
+.footer-col-1,
+.footer-col-2,
+.footer-col-3,
+.footer-col-4 {
+  min-width: 200px;
+  margin-bottom: 20px;
+}
+.footer-col-1 {
+  flex-basis: 25%;
+  text-align: left;
+  margin-right: 10px;
+  margin-left: -20px;
+}
+.footer-col-2 {
+  flex: 1;
+}
+.footer-col-2 img {
+  margin-left: 100px;
+  width: 250px;
+}
+.footer-col-3 {
+  flex-basis: 12%;
+  text-align: left;
+
+}
+.footer-col-4 {
+  flex-basis: 12%;
+  text-align: left;
+}
+ul {
+  list-style-type: none;
+}
+.app-logo {
+  margin: 20px;
+}
+.app-logo img {
+  width: 100px;
+  margin-right: 20px;
+  margin-left: -20px;
+}
+/* FOOTER END */

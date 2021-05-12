@@ -1,0 +1,340 @@
+/* GENERAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+}
+/* Change Scrollbar width */
+::-webkit-scrollbar{
+  width: 15px;
+}
+/* Change Scrollbar background color */
+::-webkit-scrollbar-thumb{
+  background: #ff9900;
+}
+/* Change Highlight background color and text color once highlighted */
+::selection{
+  background-color: #ff9900;
+  color: white;
+}
+h1, h2, h3, h4, a, p, textarea,input {
+  color: black;
+}
+.m-t {
+  margin-bottom: 120px;
+}
+.container {
+  max-width: 1465px;
+  margin: auto;
+  padding-left: 25px;
+  padding-right: 25px;
+  text-align: center;
+}
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+h2 {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+h3 {
+  font-weight: 600;
+}
+p {
+  font-weight: 400;
+}
+a {
+  text-decoration: none;
+}
+li {
+  font-weight: 400;
+  list-style: none;
+}
+/* GENERAL STYLING END */
+
+/* HEADER STYLING */
+.header {
+  background-color: black;
+  height: 800px;
+  padding-top: 20px;
+}
+
+/* Styling for the navigation bar */ 
+.nav-container {
+  width: 85%;
+  margin: auto;
+  text-align: center;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+}
+.logo img {
+  margin-top: 35px;
+  width: 250px;
+  padding-left: 20px;
+}
+nav {
+  flex: 2;
+  text-align: right;
+}
+nav ul {
+  display: inline-block;
+  list-style-type: none;
+  word-spacing: 30px;
+}
+nav ul li {
+  display: inline-block;
+  margin: 20px;
+  padding-top: 30px;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+
+
+/* Hover effect for the Syllabus button in the navigation bar */
+.btn-navcontent {
+  width: 170px;
+  height: auto;
+  text-align: center;
+  background: #ff9900;
+  border: 2px #ff9900;
+  border-radius: 2px;
+  display: inline-block;
+  padding: 10px 30px;
+  letter-spacing: 2px;
+  transition: 0.3s all;
+}
+.btn-navcontent:hover {
+  background-color: #202b38;
+  border: 3 solid transparent;
+}
+/* Hover effect for the navigation excluding the Syllabus button*/
+.navcontent::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: width 0.3s;
+  margin: auto;
+  margin-top: 5px;
+}
+.navcontent:hover::after {
+  width: 100%;
+  transition: width 0.3s;
+}
+
+/* Styling for the  the class row in the HEADER SECTION */
+.row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 1300px;
+  margin: auto;
+  padding-left: 25px;
+  padding-right: 25px;
+  flex-basis: 50%;
+  width: 85%;
+}
+#header-row{
+  margin-top:-40px;
+}
+.col-2 {
+  flex-basis: 50%;
+  min-width: 600px;
+  margin-top: 100px;
+  color: white;
+}
+.col-2 .home-image {
+  max-width: 630px;
+  height: auto;
+  margin-left: 50px;
+  border-radius: 2px;
+}
+.home-image{
+  filter: grayscale(0) blur(0);
+  transition: .3s ease-in-out;
+}
+.home-image:hover {
+	filter: grayscale(100%) blur(1px);
+}
+.col-2 h1 {
+  text-align: left;
+  font-size: 50px;
+  line-height: 60px;
+  margin: 50px 0;
+  color: white;
+}
+.col-2 p {
+  margin-top: 15px;
+  text-align: left;
+  color: white;
+}
+
+/* Hover effect for Explore button*/
+.btn-cta-explore {
+  width: 250px;
+  text-align: center;
+  background: #ff9900;
+  border: 2px #ff9900;
+  border-radius: 2px;
+  display: inline-block;
+  padding: 10px 30px;
+  letter-spacing: 2px;
+  transition: 0.3s all;
+  margin: 50px 0;
+}
+.btn-cta-explore:hover {
+  background-color: #202b38;
+  border: 3 solid transparent;
+}
+/* HEADER STYLING END */
+
+
+/* LOCATION */
+.location{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.location iframe{
+  width: 85%;
+  margin-top: 200px; 
+  margin-bottom: 200px;
+  height: 500px;
+}
+/* LOCATION END */
+
+
+/* CONTACT FORM */
+.row{
+  width: 85%;
+}
+.col-contact{
+  flex-basis: 50%;
+  margin-bottom: 30px;
+}
+.col-contact div{
+  display: flex;
+  align-items: left;
+  margin-bottom: 60px;
+}
+.col-contact div .fas{
+  color: #ff9900;
+  margin: 10px;
+  margin-right:30px;
+}
+.col-contact div p{
+  padding: 0;
+}
+.col-contact div h3{
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+.contact-form{
+  margin-top: 20px;
+}
+.contact-form input, .contact-form textarea{
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 15px;
+  outline: none;
+  border: 1px solid rgba(219, 219, 219, 0.933);
+  border-radius: 5px;
+  font-family: "Open Sans";
+  font-size: 15px;
+}
+button{
+  text-decoration: none;
+  color: white
+}
+/* Hover effect for the contact submit button */
+.btn-contact {
+  width: 200px;
+  height: 45px;
+  text-align: center;
+  background: #ff9900;
+  border: 2px #ff9900;
+  border-radius: 5px;
+  display: inline-block;
+  padding: 10px 30px;
+  letter-spacing: 2px;
+  transition: 0.3s all;
+  margin: 30px 0;
+}
+.btn-contact:hover {
+  background-color: #202b38;
+  border: 3 solid transparent;
+}
+/* CONTACT FORM END */
+
+
+/* FOOTER */
+.footer {
+  background: black;
+  color: white;
+  font-size: 12px;
+  padding: 10px 0 20px;
+  width: auto;
+  padding-top: 70px;
+  padding-left: 100px;
+  margin-top: 150px;
+}
+.footer p {
+  color: white;
+}
+.footer h3 {
+  color: #ff9900;
+  margin-bottom: 20px;
+}
+.footer-col-1,
+.footer-col-2,
+.footer-col-3,
+.footer-col-4 {
+  min-width: 200px;
+  margin-bottom: 20px;
+}
+.footer-col-1 {
+  flex-basis: 25%;
+  text-align: left;
+  margin-right: 10px;
+  margin-left: -20px;
+}
+.footer-col-2 {
+  flex: 1;
+}
+.footer-col-2 img {
+  width: 250px;
+  margin-left: 100px;
+}
+.footer-col-3 {
+  flex-basis: 12%;
+  text-align: left;
+}
+.footer-col-4 {
+  flex-basis: 12%;
+  text-align: left;
+}
+ul {
+  list-style-type: none;
+}
+.app-logo {
+  margin: 20px;
+}
+.app-logo img {
+  width: 100px;
+  margin-right: 20px;
+  margin-left: -20px;
+}
+/* FOOTER END */
+

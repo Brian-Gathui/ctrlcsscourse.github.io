@@ -1,0 +1,704 @@
+/* GENERAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+}
+/* Change Scrollbar width */
+::-webkit-scrollbar{
+  width: 15px;
+}
+/* Change Scrollbar background color */
+::-webkit-scrollbar-thumb{
+  background: #ff9900;
+}
+/* Change Highlight background color and text color once highlighted */
+::selection{
+  background-color: #ff9900;
+  color: white;
+}
+h1, h2, h3, h4,a,p {
+  color: black;
+}
+.m-t {
+  margin-bottom: 200px;
+}
+.container {
+  max-width: 1465px;
+  margin: auto;
+  padding-left: 25px;
+  padding-right: 25px;
+  text-align: center;
+}
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+h2 {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+h3 {
+  font-weight: 600;
+}
+p {
+  font-weight: 400;
+}
+a {
+  text-decoration: none;
+}
+li {
+  font-weight: 400;
+  list-style: none;
+}
+/* GENERAL STYLING END */
+
+
+/* HEADER STYLING */
+.header {
+  background-color: black;
+  height: 900px;
+  padding-top: 20px;
+
+/* Styling for the navigation bar */
+}
+.nav-container {
+  width: 85%;
+  margin: auto;
+  text-align: center;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+}
+.logo img {
+  margin-top: 35px;
+  width: 250px;
+  padding-left: 20px;
+}
+nav {
+  flex: 2;
+  text-align: right;
+}
+nav ul {
+  display: inline-block;
+  list-style-type: none;
+  word-spacing: 30px;
+}
+nav ul li {
+  display: inline-block;
+  margin: 20px;
+  padding-top: 30px;
+}
+a {
+  color: white;
+}
+.btn-navcontent{
+  scroll-behavior: smooth;
+}
+/* Hover effect for the Syllabus button in the navigation bar */
+.btn-navcontent{
+  width: 170px;
+  height: auto;
+  text-align: center;
+  background: #ff9900;
+  border: 2px #ff9900;
+  border-radius: 5px;
+  display: inline-block;
+  padding: 10px 30px;
+  letter-spacing: 2px;
+  transition: 0.3s all;
+}
+.btn-navcontent:hover {
+  background-color: #202b38;
+  border: 3 solid transparent;
+}
+/* Hover effect for the navigation excluding the Syllabus button*/
+.navcontent::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: width 0.3s;
+  margin: auto;
+  margin-top: 5px;
+}
+.navcontent:hover::after {
+  width: 100%;
+  transition: width 0.3s;
+}
+/* Styling for the  the class row in the the hero section (HEADER) */
+.row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 1300px;
+  margin: auto;
+  padding-left: 25px;
+  padding-right: 25px;
+  flex-basis: 50%;
+  width: 85%;
+}
+#header-row{
+  margin-top:-40px;
+}
+.col-2 {
+  flex-basis: 50%;
+  min-width: 600px;
+  margin-top: 100px;
+  color: white;
+}
+.col-2 p{
+  padding-bottom: 15px;
+}
+.col-2 .home-image {
+  max-width: 630px;
+  height: auto;
+  margin-left: 50px;
+  border-radius: 5px;
+}
+/* Hover effect for home-image*/
+.home-image{
+  filter: grayscale(0) blur(0);
+  transition: .3s ease-in-out;
+}
+.home-image:hover {
+	filter: grayscale(100%) blur(1px);
+}
+.col-2 h1 {
+  text-align: left;
+  font-size: 50px;
+  line-height: 60px;
+  margin: 50px 0;
+  color: white;
+}
+.col-2 p {
+  text-align: left;
+  color: white;
+}
+.col-2 .btn-cta-explore {
+  margin-left: -380px;
+}
+/* Hover effect for Explore button */
+.btn-cta-explore {
+  width: 250px;
+  text-align: center;
+  background: #ff9900;
+  border: 2px #ff9900;
+  border-radius: 5px;
+  display: inline-block;
+  padding: 10px 30px;
+  letter-spacing: 2px;
+  transition: 0.3s all;
+  margin: 50px 0;
+}
+.btn-cta-explore:hover {
+  background-color: #202b38;
+  border: 3 solid transparent;
+}
+/* HEADER STYLING END */
+
+
+/* TAUGHT BY STYLING*/
+.small-container p {
+  font-size: 15px;
+  text-align: center;
+  color: grey;
+  padding-top: 50px;
+}
+.taught {
+  background-color: #ecebeb;
+  padding-bottom: 60px;
+}
+.col-6 {
+  width: 100px;
+}
+/* Hover effect for the logo icons */
+.col-6 img {
+  width: 100%;
+  cursor: pointer;
+  filter: grayscale(100%);
+}
+.col-6 img:hover {
+  filter: grayscale(0%);
+}
+/* TAUGHT BY STYLING END*/
+
+
+/* BECOME STYLING */
+.become {
+  width: 85%;
+  height: 600px;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 150px;
+}
+.become .become-image {
+  width: 50%;
+  float: right;
+}
+.become-content{
+  padding-top: 40px;
+  text-align: left;
+  padding-left: 70px;
+}
+.become-wrapper img {
+  max-width: 100%;
+  height: 600px;
+  border-radius: 5px;
+}
+/* Hover effect for become-image*/
+.become-image{
+  filter: grayscale(0) blur(0);
+  transition: .3s ease-in-out;
+}
+.become-image:hover {
+	filter: grayscale(100%) blur(1px);
+}
+.become-content {
+  width: 50%;
+  float: left;
+  text-align: left;
+}
+.become h1 {
+  margin-top: 50px;
+  margin-bottom:30px;
+}
+.become p {
+  padding-top: 30px;
+}
+/* Hover effect for become button */
+.btn-cta-become {
+  width: 200px;
+  text-align: center;
+  background: #ff9900;
+  border: 2px #ff9900;
+  border-radius: 5px;
+  display: inline-block;
+  padding: 10px 30px;
+  letter-spacing: 2px;
+  transition: 0.3s all;
+  margin: 50px 0;
+}
+.btn-cta-become:hover {
+  background-color: #202b38;
+  border: 3 solid transparent;
+}
+/* USEFUL STYLING END */
+
+
+/* PRE-REQUISITE STYLING */
+.different {
+  width: 85%;
+  height: 500px;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 300px;
+}
+.different .different-image {
+  width: 50%;
+  float: left;
+  margin-top: 60px;
+  border-radius: 5px;
+}
+.different-wrapper img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+/* Hover effect for different-image*/
+.different-image{
+  filter: grayscale(0) blur(0);
+  transition: .3s ease-in-out;
+}
+.different-image:hover {
+	filter: grayscale(100%) blur(1px);
+}
+.different .different-content {
+  max-width: 50%;
+  float: right;
+  text-align: left;
+  padding-left: 100px;
+  margin-top: 35px;
+}
+.different h1 {
+  margin-bottom: 50px;
+}
+.different p {
+  margin-top: 50px;
+}
+/* Hover effect for different button*/
+.btn-cta-different {
+  width: 200px;
+  text-align: center;
+  background: #ff9900;
+  border: 2px #ff9900;
+  border-radius: 5px;
+  display: inline-block;
+  padding: 10px 30px;
+  letter-spacing: 2px;
+  transition: 0.3s all;
+  margin: 50px 0;
+}
+.btn-cta-different:hover {
+  background-color: #202b38;
+  border: 3 solid transparent;
+}
+/* PRE-REQUISITE STYLING END */
+
+
+/* HOW IT WORKS STYLING   */
+.how-it-works {
+  background-color: black;
+  height: 800px;
+}
+.how-it-works h1 {
+  padding-top: 80px;
+  color: white;
+}
+.sub-header {
+  padding-top: 50px;
+  color: white;
+}
+.boxes h3 {
+  padding-top: 50px;
+  color: black;
+}
+.boxes p {
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
+  color: black;
+}
+
+/* Styling for the Step Boxes */
+.box-1 {
+  margin: 80px;
+  float: left;
+  width: 260px;
+  height: 260px;
+  border-radius: 5px;
+  background: #fff5e5;
+}
+.box-2 {
+  margin-top: 50px;
+  margin: 80px;
+  float: left;
+  width: 260px;
+  height: 260px;
+  border-radius: 5px;
+  background: #ffe0b3;
+}
+.box-3 {
+  margin: 0 auto;
+  margin: 80px;
+  float: left;
+  width: 260px;
+  height: 260px;
+  border-radius: 5px;
+  background: #ffcc80;
+}
+.how-container h3 {
+  font-size: 15px;
+  text-align: center;
+  color: black;
+  padding-top: 50px;
+}
+.boxes {
+  display: inline-block;
+}
+body {
+  text-align: center;
+}
+.btn-center {
+  text-align: center;
+}
+
+/* Hover effect for the How it works button */
+.btn-cta-how {
+  width: 200px;
+  text-align: center;
+  background: #ff9900;
+  border: 2px #ff9900;
+  border-radius: 5px;
+  display: inline-block;
+  padding: 10px 30px;
+  letter-spacing: 2px;
+  transition: 0.3s all;
+}
+.btn-cta-how:hover {
+  background-color: #202b38;
+  border: 3 solid transparent;
+}
+/* HOW IT WORKS STYLING END */
+
+
+/* PRICING PACKAGE */
+.pricing-package {
+  height: 900px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  margin-right: 20px;
+}
+/* Styling for the pricing packages Free and Certified*/
+.pricing-package-1 {
+  width: 360px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  border-radius: 5px;
+  margin-right:50px
+}
+.pricing-package-3 {
+  width: 360px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  border-radius: 5px;
+  margin-left: 50px;
+}
+
+/* Styling for the pricing package Intergrated Package */
+.pricing-package-2-highlighted {
+  width: 350px;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+}
+/* Styling for the Recommended Tag above the Intergrated Package */
+.pricing-package-2-special-text {
+  padding: 10px;
+  color: white;
+  background: #202b38ea;
+}
+.pricing-package-1-header {
+  padding: 25px;
+  background: #4c5055;
+}
+.pricing-package-2-header {
+  padding: 25px;
+  background: #202b38;
+}
+.pricing-package-3-header {
+  padding: 25px;
+  background: #4c5055;
+}
+.pricing-package-title,
+.pricing-package-summary {
+  color: white;
+}
+.pricing-package-summary {
+  padding-top: 10px;
+  font-size: 13px;
+}
+.pricing-package-description {
+  padding: 25px;
+}
+.pricing-package-list {
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+}
+.pricing-package-feature {
+  padding-left: 25px;
+  text-align: left;
+  position: relative;
+}
+.pricing-package-feature:not(last-child) {
+  margin-bottom: 10px;
+}
+.pricing-package-negative {
+  padding-left: 25px;
+  text-align: left;
+  position: relative;
+}
+.pricing-package-negative:not(last-child) {
+  margin-bottom: 10px;
+}
+/* To change the unordered list list item bullet into a check or an x */
+.pricing-package-negative::before {
+  content: "\2716";
+  color: #ff9900;
+  margin-right: 5px;
+}
+.pricing-package-feature::before {
+  content: "\2714";
+  color: #ff9900;
+  margin-right: 5px;
+}
+.pricing-package-cta {
+  padding: 25px;
+  border-top: 2px solid #eeee;
+}
+.pricing-package-cost {
+  font-size: 60px;
+}
+.pricing-package-text {
+  margin-bottom: 15px;
+}
+/* Hover effect for the pricing buttons for the free and certified packages */
+.btn-cta-pricing {
+  width: 200px;
+  text-align: center;
+  background: #ff9900;
+  border: 2px #ff9900;
+  border-radius: 5px;
+  display: inline-block;
+  padding: 10px 30px;
+  letter-spacing: 2px;
+  transition: 0.3s all;
+}
+.btn-cta-pricing:hover {
+  background-color: #4c5055;
+  border: 3 solid transparent;
+}
+/* Hover effect for the pricing buttons for the intergrated package */
+.btn-cta-pricing-package-2 {
+  width: 200px;
+  text-align: center;
+  background: #ff9900;
+  border: 2px #ff9900;
+  border-radius: 5;
+  display: inline-block;
+  padding: 10px 30px;
+  letter-spacing: 2px;
+  transition: 0.3s all;
+}
+.btn-cta-pricing-package-2:hover {
+  background-color: #202b38;
+  border: 3 solid transparent;
+}
+/* PRICING PACKAGE STYLING  END */
+
+
+/* CERTIFIED BY STYLING  */
+.small-container p {
+  font-size: 15px;
+  text-align: center;
+  color: grey;
+  margin-bottom: 50px;
+  padding-top: 50px;
+}
+.certified {
+  background-color: #ecebeb;
+  padding-bottom: 50px;
+}
+.col-6 {
+  width: 100px;
+}
+/* Hover effect for the logo icons */
+.col-6 img {
+  width: 100%;
+  cursor: pointer;
+  filter: grayscale(100%);
+}
+.col-6 img:hover {
+  filter: grayscale(0%);
+}
+/* CERTIFIED BY STYLING  END*/
+
+
+/* CALL TO ACTION */
+.call-to-action {
+  color: #fff;
+  padding: 80px 0;
+  text-align: center;
+}
+.cta-wrapper {
+  background: linear-gradient(to left, #12181f, #090c0f);
+  height: 500px;
+}
+.cta__title {
+  padding-top: 25px;
+  color: white;
+}
+.cta__sub {
+  opacity: 0.6;
+  margin-top: 50px;
+  margin-bottom: 60px;
+}
+.cta__sub-center {
+  text-align: center;
+  color: white;
+}
+/* Hover effect for the call to action button */
+.btn-cta {
+  width: 250px;
+  text-align: center;
+  background: #ff9900;
+  border: 2px #ff9900;
+  border-radius: 5px;
+  display: inline-block;
+  padding: 10px 30px;
+  letter-spacing: 2px;
+  transition: 0.3s all;
+  margin-bottom: 30px;
+}
+.btn-cta:hover {
+  background-color: #202b38;
+  border: 3 solid transparent;
+}
+/* CALL TO ACTION END */
+
+/* FOOTER STYLING  */
+.footer {
+  background: black;
+  color: white;
+  font-size: 12px;
+  padding: 10px 0 20px;
+  width: auto;
+  padding-top: 100px;
+  padding-left: 100px;
+}
+.footer p {
+  color: white;
+}
+.footer h3 {
+  color: #ff9900;
+  margin-bottom: 20px;
+}
+.footer-col-1,
+.footer-col-2,
+.footer-col-3,
+.footer-col-4 {
+  min-width: 200px;
+  margin-bottom: 20px;
+}
+.footer-col-1 {
+  flex-basis: 25%;
+  text-align: left;
+  margin-right: 10px;
+  margin-left: -20px;
+}
+.footer-col-2 {
+  flex: 1;
+}
+.footer-col-2 img {
+  width: 250px;
+}
+.footer-col-3 {
+  flex-basis: 12%;
+  text-align: left;
+
+}
+.footer-col-4 {
+  flex-basis: 12%;
+  text-align: left;
+}
+ul {
+  list-style-type: none;
+}
+.app-logo {
+  margin: 20px;
+}
+.app-logo img {
+  width: 100px;
+  margin-right: 20px;
+  margin-left: -20px;
+}
+/* FOOTER STYLING END */
